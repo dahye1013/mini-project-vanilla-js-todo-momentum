@@ -129,6 +129,7 @@ body {
   align-items: center;
 }
 #quote span {
+  text-align: center;
   display: block;
   color: #fff;
   font-weight: bolder;

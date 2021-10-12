@@ -57,3 +57,21 @@ const author = document.querySelector("#quote span:last-child");
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 quote.innerText = todaysQuote.quote;
 author.innerText = todaysQuote.author;
+
+if (isMobile()) {
+  const quote = document.querySelector("#quote");
+  quote.style.display = "none";
+}
+
+// PC, MOBILE 구별
+function isMobile() {
+  if (
+    ["Win16", "Win32", "Win64", "Mac", "MacIntel"].find(
+      (element) => element == navigator.platform,
+    )
+  ) {
+    return false;
+  } else {
+    return true;
+  }
+}
